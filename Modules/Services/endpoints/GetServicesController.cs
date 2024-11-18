@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using ServiceApp.Modules.Services.entities;
 
 namespace ServiceApp.Modules.Services.endpoints
 {
@@ -17,25 +18,12 @@ namespace ServiceApp.Modules.Services.endpoints
         [HttpGet("/services")]
         public ActionResult<IEnumerable<string>> Get() 
         {
-             try
-        {
-            var database = _client.GetDatabase("HireMeDB");
-            var collections = database.ListCollectionNames().ToList();
-
-            return Ok(new
+             var database = _client.GetDatabase("HireMe");
+            var collections = database.GetCollection<Service>("Jobs");
+             return Ok(new
             {
-                Message = "Successfully connected to MongoDB!",
-                Collections = collections
+                 Services = collections.Find(l => true).ToList()
             });
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, new
-            {
-                Message = "Failed to connect to MongoDB.",
-                Error = ex.Message
-            });
-        }
         }
     }
 }
