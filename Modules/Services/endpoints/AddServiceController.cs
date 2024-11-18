@@ -5,8 +5,8 @@ namespace ServiceApp.Modules.Services.endpoints;
 [Route("api/v1/[controller]")]
 public class AddServiceController : ControllerBase
 {
-    [HttpGet("/services")]
-    public ActionResult<IEnumerable<string>> Get()
+    [HttpPost("/services")]
+    public ActionResult<IEnumerable<string>> Add()
     {
         return Ok("Services added");
     }
