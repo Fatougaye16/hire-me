@@ -24,14 +24,15 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         children: [
           AppBar(
             backgroundColor: Colors.transparent,
-            elevation: 0, 
+            elevation: 0,
             title: const Text(
               'Hire ME',
-              style: TextStyle(color: Colors.white), 
+              style: TextStyle(color: Colors.white),
             ),
             actions: [
               IconButton(
-                icon: const Icon(Icons.account_circle, size: 30, color: Colors.white),
+                icon: const Icon(Icons.account_circle,
+                    size: 30, color: Colors.white),
                 onPressed: () {},
               ),
               PopupMenuButton<String>(
@@ -46,7 +47,6 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                   const PopupMenuItem(
                     value: 'Notifications',
                     child: Text('Notifications'),
-                    
                   ),
                   const PopupMenuItem(
                     value: 'Settings',
@@ -68,7 +68,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                 hintText: 'Search jobs',
                 hintStyle: TextStyle(color: Colors.grey[400]),
                 filled: true,
-                fillColor: Colors.grey[800], 
+                fillColor: Colors.grey[800],
                 prefixIcon: const Icon(Icons.search, color: Colors.white),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -83,6 +83,5 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize =>
-      const Size.fromHeight(kToolbarHeight + 90);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 90);
 }

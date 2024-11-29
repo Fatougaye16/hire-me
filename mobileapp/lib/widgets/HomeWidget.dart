@@ -6,11 +6,53 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, String>> jobs = [
-      {'title': 'Software Engineer', 'company': 'TechCorp'},
-      {'title': 'Data Analyst', 'company': 'DataSolutions'},
-      {'title': 'UI/UX Designer', 'company': 'DesignHub'},
+      {
+        'title': 'Carpenter',
+        'company': 'TechCorp',
+        'image': 'assets/images/carpentry.jpg'
+      },
+      {
+        'title': 'Painter',
+        'company': 'DataSolutions',
+        'image': 'assets/images/painted-building.jpg'
+      },
+      {
+        'title': 'Contractor',
+        'company': 'DesignHub',
+        'image': 'assets/images/contractor.jpg'
+      },
+      {
+        'title': 'Carpenter',
+        'company': 'TechCorp',
+        'image': 'assets/images/carpentry.jpg'
+      },
+      {
+        'title': 'Painter',
+        'company': 'DataSolutions',
+        'image': 'assets/images/painted-building.jpg'
+      },
+      {
+        'title': 'Contractor',
+        'company': 'DesignHub',
+        'image': 'assets/images/contractor.jpg'
+      },
+      {
+        'title': 'Carpenter',
+        'company': 'TechCorp',
+        'image': 'assets/images/carpentry.jpg'
+      },
+      {
+        'title': 'Painter',
+        'company': 'DataSolutions',
+        'image': 'assets/images/painted-building.jpg'
+      },
+      {
+        'title': 'Contractor',
+        'company': 'DesignHub',
+        'image': 'assets/images/contractor.jpg'
+      },
     ];
-    //display jobs
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: ListView.builder(
@@ -21,12 +63,16 @@ class HomeWidget extends StatelessWidget {
             margin: const EdgeInsets.symmetric(vertical: 8.0),
             elevation: 4,
             child: ListTile(
-              leading: const Icon(Icons.work, color: Color.fromARGB(255, 32, 32, 32)),
+              leading: Image.asset(
+                job['image']!,
+                width: 80,
+                height: 100,
+              ),
               title: Text(
                 job['title']!,
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
-              subtitle: const Text('text'),
+              subtitle: Text(job['company']!),
             ),
           );
         },
