@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
+  const Header({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +16,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
           ),
         ],
         borderRadius: const BorderRadius.vertical(
-          bottom: Radius.circular(10),
+          bottom: Radius.circular(20),
         ),
       ),
       // child: const Text('Welcome Back'),

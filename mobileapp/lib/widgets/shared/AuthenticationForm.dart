@@ -14,9 +14,8 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
         padding: const EdgeInsets.all(16),
         child: Form(
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.
               children: [
                 const Text(
                   'Log In',
@@ -29,13 +28,22 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
                 TextFormField(
                   decoration: const InputDecoration(labelText: 'Password'),
                 ),
+                const SizedBox(
+                  height: 30,
+                ),
                 ElevatedButton(
-                  onPressed: () => {},
-                  child: const Text('Sign In'),
-                  style: ButtonStyle(
+                    onPressed: () => {},
+                    style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.grey)),
-                )
+                          MaterialStateProperty.all<Color>(Colors.black),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Text(
+                        'Sign In',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ))
               ],
             ),
           ),
