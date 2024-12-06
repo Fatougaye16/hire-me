@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobileapp/screens/Authentication.dart';
 import 'package:mobileapp/screens/home.dart';
 import 'package:mobileapp/screens/splash.dart';
 
@@ -15,9 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/home': (context) => const HomeScreen(),
-        '/splash': (context) => SplashScreen(),
+        '/splash': (context) => const SplashScreen(),
+        '/auth': (context) =>  AuthenticationScreen(),
       },
-      initialRoute: '/splash',
+      initialRoute: '/auth',
     );
   }
 }

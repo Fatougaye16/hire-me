@@ -74,6 +74,7 @@ class HomeWidget extends StatelessWidget {
               ),
               subtitle: Text(job['company']!),
             ),
+            
           );
         },
       ),
