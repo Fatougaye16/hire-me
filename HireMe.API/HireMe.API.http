@@ -1,0 +1,6 @@
+@HireMe.API_HostAddress = http://localhost:5289
+
+GET {{HireMe.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,6 @@
+﻿services:
+  hireme.api:
+    image: hireme.api
+    build:
+      context: .
+      dockerfile: HireMe.API/Dockerfile
