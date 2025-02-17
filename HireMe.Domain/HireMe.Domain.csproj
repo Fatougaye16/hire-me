@@ -7,9 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Common\" />
+      <Folder Include="Common\Errors\" />
+      <Folder Include="Common\Validators\" />
+      <Folder Include="Common\ValueObjects\" />
       <Folder Include="RecruiterAggregate\" />
-      <Folder Include="WorkersAggregate\" />
+      <Folder Include="WorkerAggregate\Errors\" />
+      <Folder Include="WorkerAggregate\Validators\" />
+      <Folder Include="WorkerAggregate\ValueObjects\" />
     </ItemGroup>
 
 </Project>
